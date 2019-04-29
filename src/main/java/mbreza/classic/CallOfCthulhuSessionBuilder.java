@@ -1,31 +1,31 @@
 package mbreza.classic;
 
-public class WarhammerSessionBuilder implements RpgSessionBuilder{
+public class CallOfCthulhuSessionBuilder implements RpgSessionBuilder {
 
     RpgSession rpgSession;
 
-    public WarhammerSessionBuilder() {
+    public CallOfCthulhuSessionBuilder() {
         this.rpgSession = new RpgSession();
     }
 
     @Override
     public void addGameType() {
-        rpgSession.setGameType(GameType.WARHAMMER);
+        rpgSession.setGameType(GameType.CALLOFCTHULHU);
     }
 
     @Override
     public void addGameMaster() {
-        rpgSession.setGameMaster("John");
+        rpgSession.setGameMaster("Luke");
     }
 
     @Override
     public void addNumberOfPlayers() {
-        rpgSession.setNumberOfPlayers(4);
+        rpgSession.setNumberOfPlayers(3);
     }
 
     @Override
     public void addSessionLocation() {
-        rpgSession.setSessionLocation("John's basement");
+        rpgSession.setSessionLocation("Luke's basement");
     }
 
     @Override

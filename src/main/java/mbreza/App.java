@@ -1,20 +1,25 @@
 package mbreza;
 
-import mbreza.fluent.Client;
+import mbreza.classic.*;
+import mbreza.fluent.RpgSessionFluent;
 
-/**
- * Hello world!
- *
- */
 public class App {
     public static void main( String[] args ) {
-        Client client = new Client.Builder()
-                .FirstName("Slawomir")
-                .LastName("Kowalski")
+        RpgSessionFluent rsf = new RpgSessionFluent.Builder()
+                .addGameType(GameType.CALLOFCTHULHU)
+                .addGameMaster("Kowalski")
+                .addNumberOfPlayers(4)
+                .addSessionLocation("Kowalski's basement")
                 .build();
 
 
-        System.out.println("Data client: "+"\nFirstName: " +  client.FirstName+
-                "\nLastName: " +client.LastName);
+        System.out.println(rsf.getSessionLocation());
+
+        RpgSessionGenerator rsg = new RpgSessionGenerator();
+
+        RpgSessionBuilder rsb = new DungeonsAandDragonsSessionBuilder();
+        rsg.generateSession(rsb);
+        RpgSession rs = rsb.getRpgSession();
+        System.out.println(rs.getSessionLocation());
     }
 }

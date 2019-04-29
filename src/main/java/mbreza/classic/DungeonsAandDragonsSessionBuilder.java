@@ -1,31 +1,31 @@
 package mbreza.classic;
 
-public class WarhammerSessionBuilder implements RpgSessionBuilder{
+public class DungeonsAandDragonsSessionBuilder implements RpgSessionBuilder {
 
     RpgSession rpgSession;
 
-    public WarhammerSessionBuilder() {
+    public DungeonsAandDragonsSessionBuilder() {
         this.rpgSession = new RpgSession();
     }
 
     @Override
     public void addGameType() {
-        rpgSession.setGameType(GameType.WARHAMMER);
+        rpgSession.setGameType(GameType.DUNGEONSANDDRAGONS);
     }
 
     @Override
     public void addGameMaster() {
-        rpgSession.setGameMaster("John");
+        rpgSession.setGameMaster("Mark");
     }
 
     @Override
     public void addNumberOfPlayers() {
-        rpgSession.setNumberOfPlayers(4);
+        rpgSession.setNumberOfPlayers(5);
     }
 
     @Override
     public void addSessionLocation() {
-        rpgSession.setSessionLocation("John's basement");
+        rpgSession.setSessionLocation("Mark's basement");
     }
 
     @Override

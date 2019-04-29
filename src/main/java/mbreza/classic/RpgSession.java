@@ -6,7 +6,6 @@ public class RpgSession {
     private GameType gameType;
     private String gameMaster;
     private int numberOfPlayers;
-    private Date sessionDate;
     private String sessionLocation;
 
     public GameType getGameType() {
@@ -31,14 +30,6 @@ public class RpgSession {
 
     public void setNumberOfPlayers(int numberOfPlayers) {
         this.numberOfPlayers = numberOfPlayers;
-    }
-
-    public Date getSessionDate() {
-        return sessionDate;
-    }
-
-    public void setSessionDate(Date sessionDate) {
-        this.sessionDate = sessionDate;
     }
 
     public String getSessionLocation() {
