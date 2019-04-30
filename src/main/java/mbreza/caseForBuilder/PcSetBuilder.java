@@ -24,6 +24,38 @@ public class PcSetBuilder {
         cpu = builder.cpu;
     }
 
+    public String getMonitor() {
+        return monitor;
+    }
+
+    public String getBox() {
+        return box;
+    }
+
+    public String getMotherboard() {
+        return motherboard;
+    }
+
+    public String getPsu() {
+        return psu;
+    }
+
+    public String getStorage() {
+        return storage;
+    }
+
+    public String getRam() {
+        return ram;
+    }
+
+    public String getGpu() {
+        return gpu;
+    }
+
+    public String getCpu() {
+        return cpu;
+    }
+
 
     public static class Builder {
         private String monitor;
